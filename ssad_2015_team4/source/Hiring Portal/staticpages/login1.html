@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+  </head>
+  <body class="">
+    <nav class="main-navbar" role="navigation">
+      <div id="logo"></div>
+      <div class="logo-text">IIIT Hyderabad</div>
+      <div class="web-name">Faculty Hiring Portal</div>
+      <div class="container-fluid">
+        <hr class="divider">
+        <div class="main-navbar-content">
+          <ul class="menu">  
+            <li class="menu-tabs">Job Openings</li>
+            <li class="menu-tabs">FAQ's</li>
+          </ul>
+	    </div>
+      </div>
+    </nav>
+    <div class="home-button">home</div>
+    <div class="container">
+      <h2 >Login</h2>
+    <div class="contact-form">
+      <div class="signin">
+        <form action="/accounts/login" method="post">{% csrf_token %}
+          <input type="text" placeholder="Username" value="username" name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Username';}" />
+          <input type="password" value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" />
+          <input type="submit" value="Login" />
+        </form>
+        <h4><a href="/accounts/register">Sign Up here</a></h4>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

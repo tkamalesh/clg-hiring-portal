@@ -1,0 +1,71 @@
+.container
+{
+		width:80%;
+		      	margin-bottom:100px;
+				margin-top:100px;	
+}
+.nav
+{
+height:85px;
+background:#CBE8BA;
+	   font-size:130%;
+}
+
+.navbar-nav
+{
+	padding-top:1.3%;
+
+
+}
+.navbar-nav li
+{
+color:yellow;
+}
+#logo{
+	margin-left:30px;
+	margin-bottom:3px;
+}
+.navbar-toggle
+{
+	margin-top:30px;
+}
+	
+.navbar-brand{
+	margin-left:50px;
+	font-size:100%;
+}
+.login-form{
+	margin-top:5%;
+}
+	
+.login-form
+{
+background:#DFEDD6;
+width:100%;
+padding:1% 5% 5% 12%;
+border: 2px solid black;
+	border-radius:20px;
+	margin-bottom:25%;
+}
+.fieldss
+{
+width:90%;
+      margin-top:5%;
+      font-size:130%;
+
+}
+.address
+{    
+	list-style-type: none;
+	font-weight:bold;
+}
+.footer
+{
+clear:left;
+
+}
+.line
+{
+	border-width:3px;
+	border-color:black;		
+}

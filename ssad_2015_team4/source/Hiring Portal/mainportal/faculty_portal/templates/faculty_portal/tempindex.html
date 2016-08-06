@@ -1,0 +1,74 @@
+<html>
+{% load staticfiles %}
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <link href="{% static "faculty_portal/css/style.css" %}" rel="stylesheet">
+</head>
+<body>
+{% if candidate %}
+    <table style="border:1px">
+    <tr>
+    	<th>Application id</th>
+	<th>Applicant Name</th>
+	<th>Application name</th>
+	<th>Research Lab</th>
+	<th>Action</th>
+    </tr>
+    <tr>
+        <td><a href="{% url 'detail' candidate.user_id %}">{{ candidate.user_id }}</a></td>
+        <td>{{ candidate.givenname }}{{candidate.surname}}</td>
+        <td>{{ candidate.application.name }}</td>
+        <td>{{ candidate.application.applied_researchLab }}</td>
+    </tr>
+    </table>
+<div class="checkout-wrap">
+  <ul class="checkout-bar">
+
+    <li class="visited first">Registration</li>
+    
+    
+    <li class="active">Application Filled</li>
+    
+
+
+    <li class="next">Application Validated</li>
+    
+    <li class="">Selected for Interview</li>
+    
+    <li class="">Completed</li>
+
+    <li  style="display:none">Rejected</li>
+       
+  </ul>
+</div>
+    
+{% else %}
+    <p>You have not applied.</p>
+{% endif %}
+</body>
+</html>
+
+</body>
+</html>
+
+<script>
+	if ({{candidate.application.status}} == 1)
+	{
+		console.log("In the function");
+		$("li:nth-child(2)").removeClass("active");
+		$("li:nth-child(2)").addClass("previous visited");
+		$("li:nth-child(3)").addClass("active");
+	}
+	else if({{candidate.application.status}} == 0)
+	{
+		var i=3;
+		while(i--)
+		{
+			//$("li:nth-child("+i+")").css({"visibility":"hidden"});
+			$("li:nth-child(3)").remove();
+		}
+		$("li:nth-child(3)").css({"display":"inline-block"});
+		$("li:nth-child(3)").addClass("active");
+		$(".checkout-bar li.active:after").css({"background-color":"#EA3A3A"});
+	}
+</script>

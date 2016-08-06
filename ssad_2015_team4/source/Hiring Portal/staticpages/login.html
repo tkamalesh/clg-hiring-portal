@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Login</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<style>
+.container
+{
+	width:80%;
+	margin-bottom:;
+	margin-top:100px;	
+}
+.nav
+{
+height:85px;
+background:#CBE8BA;
+font-size:130%;
+}
+
+.navbar-nav
+{
+padding-top:1.3%;
+
+
+}
+.navbar-nav li
+{
+color:yellow;
+}
+#logo{
+margin-left:30px;
+margin-bottom:3px;
+}
+.navbar-toggle
+{
+margin-top:30px;
+}
+	
+.navbar-brand{
+margin-left:50px;
+font-size:100%;
+}
+.login-form{
+margin-top:30%;
+}
+	
+.login-form
+{
+background:#DFEDD6;
+width:100%;
+padding:1% 5% 5% 12%;
+border: 15px solid #B17500;
+margin-bottom:35%;
+
+
+}
+.fieldss
+{
+width:92%;
+margin-top:8%;
+font-size:130%;
+
+}
+.address
+{    
+list-style-type: none;
+font-weight:bold;
+}
+.footer
+{
+clear:left;
+
+}
+.line
+{
+border-width:3px;
+border-color:black;		
+}
+.User
+{
+height:50px;	
+}
+	
+.heading
+{
+text-align:center;
+
+padding:0px;
+margin-left:-12%;
+}
+.row
+{
+font-weight:bold;
+font-size:150%;
+color:white;
+background:#00FF80;
+margin-top:-1.6%;
+margin-left:-15.5%;
+margin-right:-6.6%;
+padding-top:20px;
+padding-bottom:10px;
+padding-left:-10%;
+text-align:center;
+}
+.btn
+{
+width:100%;
+/*text-align:center;*/
+font-weight:bold;
+padding-left:-5%;
+		
+}
+.glyphicon
+{
+background:#656565;
+}
+.glyphicon-user,.glyphicon-lock
+{
+color:white;
+}
+.	
+</style>
+<body>  
+    <div class="nav navbar-default navbar-fixed-top">
+
+			<div class="navbar-header">	
+	
+				<a href="" class="navbar-brand"><img id="logo" src="logo.png"height="200%" width="40%"/>IIIT HYDERABAD</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">	
+				<span class="icon-bar"></span>	
+				<span class="icon-bar"></span>	
+				<span class="icon-bar"></span>	
+			</button>		
+	
+			</div>
+		<div class="collapse navbar-collapse">	
+	
+				<ul class="nav navbar-nav">	
+	
+					<li class=""><a href="">Job Openings</a></li>	
+	
+					<li><a href="">FAQ's</a></li>	
+	
+						
+	
+				</ul>	
+	
+			</div>
+	
+		</div>
+	</div>
+
+    <div class="home-button">home</div>
+    <div class="container">
+	<div class=" col-md-4 col-md-offset-4" >     
+
+    <div class="login-form">
+	<div class="row">
+	<p class"logtoacc"> Login to your account </p>
+     	</div>
+     <!--   <form action="/accounts/login" method="post">{% csrf_token %}	-->
+    <div class="input-group fieldss">
+	 <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+          <input type="text" placeholder="Username" id="Username" class="form-control User"name="username"" />
+</div> 
+<div class="input-group fieldss">	
+<span class="input-group-addon glyphicon glyphicon-lock" id="basic-addon1"></span>
+          <input type="password"  name="password" id="Password" class="form-control User" placeholder="password" />
+</div>
+<div class="form-group fieldss ">	         
+	<input type="submit"  name="submit" class="btn btn-primary" value="Login" id="login" />
+
+
+</div>
+        </form>
+        <h4><a href="/accounts/register">Sign Up here</a></h4>
+      </div>
+      </div>
+    
+ <div class="footer">
+
+      <hr class="line">
+
+     
+
+	<ul class="address">
+	<li>Postal address:</li>
+	<br>
+	  <li>International Institute of Information Technology</li>
+
+	  <li>Gachibowli, Hyderabad 500032</li>
+
+	  <li>Telangana, INDIA</li>
+
+	  <li>Fax : +91-40-6653 1413</li>
+
+	
+
+	<li>Phone : +91-40-6653 1000</li>
+
+      
+
+      <div class="copyright"></div>
+
+    </div>
+</div>	
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1>You are currently viewing application id {{candidate.application.id}}</h1>
+<h3>Candidate name : </h3> <p>{{candidate.givenname}} {{application.candidate.surname}}</p>
+<h3>Age : </h3> <p> {{candidate.age}}</p>
+{% if candidate.resume %}
+<a href="/static/{{candidate.resume}}">Resume</a>
+{% endif %}
+{% if candidate.cover_letter %}
+<a href="/static//{{candidate.cover_letter}}">Cover Letter</a>
+{% endif %}
+<embed src={{candidate.application.summarysheet}} width="800px" height="500px">
+<body>
+<html>
+
