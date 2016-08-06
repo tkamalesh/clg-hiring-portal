@@ -1,0 +1,83 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body>
+{% if candidate %}
+
+
+<table style="border:1px">
+    <tr>
+    	<th>Application id</th>
+	<th>Applicant Name</th>
+	<th>Application name</th>
+	<th>Research Lab</th>
+	<th>Actions</th>
+    </tr>
+    {% for candidates in candidate %}
+    <tr>
+        <td><a href="{% url 'staffdetail' candidates.user_id %}">{{ candidates.user_id }}</a></td>
+        <td>{{ candidates.givenname }}{{candidates.surname}}</td>
+        <td>{{ candidates.application.name }}</td>
+        <td>{{ candidates.application.applied_researchLab }}</td>
+        
+        
+	    <td>
+            <form class="forward" action = "/academic/staff/{{ candidates.user_id }}/forward/" method = "post">
+            {% csrf_token %}
+            <input  type="submit" value="Forward">
+            </form>
+            <form class="reject" action = "/academic/staff/{{ candidates.user_id }}/reject/" method = "post">
+            {% csrf_token %}
+            <input  type="submit" value="Reject">
+            </form>
+        </td>
+        
+    </tr>
+    {% endfor %}
+</table>
+
+{% else %}
+    <p>No applications are available.</p>
+{% endif %}
+</body>
+
+</html>
+
+<script>
+$(document).ready(function() {
+    $(".forward").submit(function(event) {
+    
+    var state = confirm( "Are you sure you want to forward the application ?" );
+    if(state == true)
+    {
+        /*$(this).submit();*/
+        console.log("Application Forwarded successfully to hiring committee.");
+	$(this).remove()
+    }
+    else
+    {
+        event.preventDefault();
+        console.log("Application not forwarded");
+    }
+    
+    });
+
+    $(".reject").submit(function(event) {
+    
+    var state = confirm( "Are you sure you want to reject the application ?" );
+    if(state == true)
+    {
+        /*$(this).submit();*/
+        console.log("Application rejected successfully.");
+    }
+    else
+    {
+        event.preventDefault();
+        console.log("Application not rejected");
+    }
+    
+    });
+});
+</script>

@@ -1,0 +1,15 @@
+<html>
+        <head>
+                <title>Hiring Portal | Basic reg.</title>
+        </head>
+        <body>
+                <form action="{% url "candidateregister" %}"  method="post">
+		{% csrf_token %}
+                {{ form.as_table }}
+                        <input type="submit" value="Register" />
+                </form>
+        </body>
+</html>
+
+<!DOCTYPE html> 
+

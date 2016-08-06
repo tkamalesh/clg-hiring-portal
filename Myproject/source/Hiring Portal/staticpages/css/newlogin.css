@@ -1,0 +1,133 @@
+.container
+{
+
+    
+      margin-top:190px;	
+}
+.nav
+{
+height:85px;
+background:#5F5F5F;
+font-size:130%;
+}
+
+.navbar-nav li
+{
+height:100%;
+letter-spacing:1px;
+
+}
+ 		
+
+.navbar-default .navbar-nav > li > a
+{
+color:#F1F1F1;
+padding-top:34px;
+height:100%;
+}
+.navbar-default .navbar-nav > li > a:hover
+{
+color:#F1F1F1;
+background:black;
+
+}
+.navbar-default .navbar-brand
+{
+color:#F1F1F1;
+}
+
+#logo{
+margin-left:30px;
+margin-bottom:3px;
+}
+.navbar-toggle
+{
+margin-top:30px;
+}
+.navbar-brand{
+margin-left:50px;
+font-size:100%;
+}
+.navbar-default .navbar-brand:hover
+{
+color:#F1F1F1;
+}	
+
+	
+
+.login-form
+{
+background:#DFEDD6;
+width:100%;
+padding:1% 5% 5% 12%;
+border: 15px solid #B17500;
+	margin-bottom:35%;
+
+
+}
+.fieldss
+{
+width:92%;
+      margin-top:8%;
+      font-size:130%;
+
+}
+.address
+{    
+	list-style-type: none;
+	font-weight:bold;
+}
+.footer
+{
+clear:left;
+
+}
+.line
+{
+	border-width:3px;
+	border-color:black;		
+}
+.User
+{
+height:50px;	
+}
+
+.heading
+{
+	text-align:center;
+
+padding:0px;
+	margin-left:-12%;
+}
+.row
+{
+	font-weight:bold;
+	font-size:150%;
+color:white;
+background:#00FF80;
+	   margin-top:-1.6%;
+	   margin-left:-15.5%;
+	   margin-right:-6.6%;
+	   padding-top:20px;
+	   padding-bottom:10px;
+	   padding-left:-10%;
+	   text-align:center;
+}
+.btn
+{
+width:100%;
+      /*text-align:center;*/
+      font-weight:bold;
+      padding-left:-5%;
+
+}
+.glyphicon
+{
+background:#656565;
+}
+.glyphicon-user,.glyphicon-lock
+{
+color:white;
+}
+.	
+

@@ -1,0 +1,55 @@
+{% extends 'faculty_portal/base.html' %}
+
+
+{% block content %}
+
+{% if candidate %}
+
+
+<div class="container">
+<h1 style="font-size:235%;text-align:center">Application details</h1>
+	<div class=" col-md-6 col-md-offset-1" > 
+<div class="list_of_apps">
+    <ul class="details" style="padding-left:0px;padding-top:10px">
+       <li class="det_list" ><b class="headings">Application id :</b>   {{ candidate.user_id }}<!-- <div class="content" ></div>-->
+       </li> 
+       <br>
+	    <li class="det_list" ><b class="headings">Applicant Name:</b>{{ candidate.givenname }} {{candidate.surname}}<!-- <div class="content" ></div> --></li>
+	    <br>
+	    <li class="det_list" ><b class="headings">Research Lab : </b>   {{ candidate.application.applied_researchLab }}<div class="content" ></div></li>
+	    <br>
+	    <li class="det_list" ><a href="{{candidate.application.summarysheet}}" target="_blank"><b class="headings">View Profile</b></a></li>
+    </ul>
+    </div>
+
+   </div>
+<div class="checkout-wrap">
+
+
+  
+<ul class="checkout-bar" style="margin-top:300px">
+
+    <li class="visited first">Registration</li>
+    
+    
+    <li class="active">Application Filled</li>
+    
+
+
+    <li class="next">Application Validated</li>
+    
+    <li class="">Selected for Interview</li>
+    
+    <li class="">Completed</li>
+
+    <li  style="display:none">Rejected</li>
+       
+  </ul>
+
+</div>
+
+{% else %}
+    <p>You have not applied.</p>
+{% endif %}
+
+{% endblock %}

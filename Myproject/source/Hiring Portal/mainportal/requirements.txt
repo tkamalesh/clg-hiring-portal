@@ -1,0 +1,41 @@
+pip install Django == 1.8.6
+#Check if it is installed successfully.
+python -c "import django; print(django.get_version())"
+
+
+#Setting up mysql server.
+sudo apt-get install python-mysqldb 
+
+pip install reportlab
+
+#CAS
+pip install python-cas
+
+(If it does not install be a "su" and try again).
+
+
+
+Changes to be made -
+
+cd ./mainportal
+Open settings.py and make the following changes.
+
+You must have mysql installed.
+Create a new database and in th "NAME" field use this name.
+In DATABSES section, change the name of the database 'NAME', 'USER' and 'PASSWORD' accordingly.
+Give EMAIL related information in - 'EMAIL_HOST' etc.
+
+'MEDIA_ROOT' should now be changesd to an appropriate folder where you wan the uploaded files to get saved. Just give the absolute path of the directory and ensure that the folder must be present in the project folder. So best option is to have something like - "/home/<Anyfolder>/ssad_team_2015_team4/source/Hiring Portal/mainportal/static"
+Just see that the path before "ssad_team_2015_team4" is correctly set. Rest all can be kept the same.
+
+First run "python manage.py migrate" to make initial migrations.
+
+Now comment out the following apps in "settings.py" (in ./mainportal) -
+faculty_portal, django_cas_ng, authentication, userroles, Academic.Faculty, Academic.HiringCommittee, Academic.Staff.
+
+
+Now run, "python manage.py makemigrations" to check for latest migrations.
+And again run, "python manage.py migrate"
+
+To start the server, "python manage.py runserver"
+
